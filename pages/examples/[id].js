@@ -1,7 +1,9 @@
 import Head from "next/head";
+import styles from "../../styles/Home.module.css";
+
 
 export const getStaticPaths = async () => {
-  const res = await fetch("https://jsonplaceholder.typicode.com/users");
+  const res = await fetch("https://jsonplaceholder.typicode.com/photos/");
   const data = await res.json();
 
   const paths = data.map((example) => {
@@ -17,7 +19,7 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async (context) => {
   const id = context.params.id;
-  const res = await fetch("https://jsonplaceholder.typicode.com/users/" + id);
+  const res = await fetch("https://jsonplaceholder.typicode.com/photos/" + id);
   const data = await res.json();
 
   return {
@@ -29,18 +31,34 @@ const Details = ({ example }) => {
   return (
     <div>
       <Head>
-        <title>{example.name}</title>
-        <meta name="description" content={example.email} />
-        <meta name="Keywords" content={example.address.street} />
+        <title>{example.title}</title>
+    <meta property="og:image" content={example.url} />
+
+        {/* <meta name="description" content={example.email} />
+        <meta name="Keywords" content={example.address.street} /> */}
       </Head>
-      <div> Person Detail page</div>
+      <div className={styles["d-flex"] +" "+styles["justify-content-between"] +" "+styles[" align-items-center"] }>
+      <h1> Person Detail page</h1>   
+      <span> Back </span>
+      </div>
+      <fieldset>
+      <div className={styles["d-flex"] +" "+  styles[" align-items-center"] }>
+      <span>{example.albumId} </span>
+      <h2>{example.title}</h2> 
+      </div>
 
-      <h2>{example.name}</h2>
+      <div>
+      <img src={example.url}  height="250" width="250" />
+      
+      </div>
+      <div>
+      <img src={example.thumbnailUrl}  height="100" width="100" />
 
-      <p>{example.email}</p>
-      <h3>Address</h3>
-      <p>{example.address.street}</p>
-      <p>{example.address.city}</p>
+      </div>
+
+      </fieldset>
+
+
     </div>
   );
 };

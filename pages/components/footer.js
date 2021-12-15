@@ -6,7 +6,7 @@ import Link from 'next/link'
 export default function Footer() {
     return (
       <Link href="/about">
-        <a> Footer</a>
+        <h1> Footer </h1>
       </Link>
     )
   }
