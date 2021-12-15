@@ -33,7 +33,7 @@ const Details = ({ example }) => {
         <meta name="description" content={example.email} />
         <meta name="Keywords" content={example.address.street} />
       </Head>
-      <div>Detail pagessss</div>
+      <div> Person Detail page</div>
 
       <h2>{example.name}</h2>
 
