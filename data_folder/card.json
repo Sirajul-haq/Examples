@@ -1,0 +1,33 @@
+[
+    {
+        "id": 1,
+       
+        "moviename": "Fast and Furious 9",
+        "images" :"https://products.hitasoft.in/UI/VOD/Assets/images/f9-trailer.jpg"
+
+    },
+    {
+        "id": 2,
+        "images" : "https://products.hitasoft.in/UI/VOD/Assets/images/Superman-and-Batman-1.png",
+        "moviename": "Batman vs Superman"
+
+    },
+    {
+        "id": 3,
+        "images" : "https://products.hitasoft.in/UI/VOD/Assets/images/banner_1.png",
+        "moviename": "Jumanji"
+
+    },
+    {
+        "id": 4,
+        "images" : "https://products.hitasoft.in/UI/VOD/Assets/images/fantastic-four.webp",
+        "moviename": "Fantastic Four"
+
+    },
+    {
+        "id": 5,
+        "images" : "https://products.hitasoft.in/UI/VOD/Assets/images/blackpanther-banner.png",
+        "moviename": "Black Panthar"
+
+    }
+]
