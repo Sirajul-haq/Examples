@@ -144,3 +144,23 @@
   padding: 10px;
   margin: 10px 0;
 }
+
+.d-flex {
+  display: flex;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+
+
+.titlediv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

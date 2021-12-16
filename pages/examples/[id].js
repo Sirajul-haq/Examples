@@ -37,7 +37,7 @@ const Details = ({ example }) => {
         {/* <meta name="description" content={example.email} />
         <meta name="Keywords" content={example.address.street} /> */}
       </Head>
-      <div className={styles["d-flex"] +" "+styles["justify-content-between"] +" "+styles[" align-items-center"] }>
+      <div className={styles.navstyles}>
       <h1> Person Detail page</h1>   
       <span> Back </span>
       </div>
