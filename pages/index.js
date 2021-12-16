@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
-// import styles from "../styles/Home.module.css";
-import styles from "../styles/about.module.scss";
+import styles from "../styles/Home.module.css";
+
   import Datas from "../data_folder/card.json";
 import Link from "next/link";
 

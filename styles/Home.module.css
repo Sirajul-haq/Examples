@@ -122,27 +122,29 @@
 }
 
 
-.list_menus{
+.list_menus {
   display: flex;
   justify-content: space-between;
   list-style-type: none;
   width: 100%;
   max-width: 500px;
-
 }
 
-.center_text{
-
+.center_text {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 80vh;
 }
 
-.namelayout{
+.namelayout {
   background-color: #effefe;
   padding: 10px;
   margin: 10px 0;
+}
+
+.d_flex {
+  display: flex;
 }
 
 .d-flex {
@@ -157,6 +159,9 @@
   justify-content: space-between;
 }
 
+.align-self-center {
+  align-self: center !important;
+}
 
 
 .titlediv{
