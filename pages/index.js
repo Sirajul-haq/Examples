@@ -2,7 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 
-  import Datas from "../data_folder/card.json";
+import Datas from "../data_folder/card.json";
 import Link from "next/link";
 
 const Home = () => {
@@ -59,13 +59,17 @@ const Home = () => {
         <div className={styles.d_flex}>
           {Datas &&
             Datas.map((data) => (
-              <div key={data.id} className={styles.container}>
-                <div>
-                  <img src={data.images} height={200} width={200} />
-                </div>
+              <Link href={"/datas/" + data.id} key={data.id}>
+                <a>
+                  <div className={styles.container}>
+                    <div>
+                      <img src={data.images} height={200} width={200} />
+                    </div>
 
-                <h3>{data.moviename}</h3>
-              </div>
+                    <h3>{data.moviename}</h3>
+                  </div>
+                </a>
+              </Link>
             ))}
         </div>
       </section>

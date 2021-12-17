@@ -166,6 +166,14 @@
 
 .titlediv{
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  flex-wrap: wrap;
+
+}
+.titlediv a {
+  margin: 10px;
+  height: 350px;
+  width: 100%;
+  max-width: 450px;
 }

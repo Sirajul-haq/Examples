@@ -1,7 +1,6 @@
 import Head from "next/head";
 import styles from "../../styles/Home.module.css";
 
-
 export const getStaticPaths = async () => {
   const res = await fetch("https://jsonplaceholder.typicode.com/photos/");
   const data = await res.json();
@@ -32,33 +31,27 @@ const Details = ({ example }) => {
     <div>
       <Head>
         <title>{example.title}</title>
-    <meta property="og:image" content={example.url} />
-
-        {/* <meta name="description" content={example.email} />
-        <meta name="Keywords" content={example.address.street} /> */}
+        <meta property="og:image" content={example.url} />
+        <meta property="og:description" content={example.title} />
       </Head>
+
       <div className={styles.navstyles}>
-      <h1> Person Detail page</h1>   
-      <span> Back </span>
+        <h1> Person Detail page</h1>
+        <span> Back </span>
       </div>
       <fieldset>
-      <div className={styles["d-flex"] +" "+  styles[" align-items-center"] }>
-      <span>{example.albumId} </span>
-      <h2>{example.title}</h2> 
-      </div>
+        <div className={styles["d-flex"] + " " + styles[" align-items-center"]}>
+          <span>{example.albumId} </span>
+          <h2>{example.title}</h2>
+        </div>
 
-      <div>
-      <img src={example.url}  height="250" width="250" />
-      
-      </div>
-      <div>
-      <img src={example.thumbnailUrl}  height="100" width="100" />
-
-      </div>
-
+        <div>
+          <img src={example.url} height="250" width="250" />
+        </div>
+        <div>
+          <img src={example.thumbnailUrl} height="100" width="100" />
+        </div>
       </fieldset>
-
-
     </div>
   );
 };
