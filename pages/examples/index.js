@@ -1,6 +1,5 @@
 import styles from "../../styles/Home.module.css";
 import Link from "next/link";
-// import Image from 'next/Image';
 
 export const getServerSideProps = async () => {
   const res = await fetch(
@@ -22,10 +21,10 @@ export default function Examples({ examples }) {
           <Link href={"/examples/" + example.id} key={example.id}>
             <a>
               <div className={styles.namelayout}>
-
-               <div className={styles.d_flex}>
-                <h3> {example.id} </h3>
-                <h4> .{example.title}</h4> </div> 
+                <div className={styles.d_flex}>
+                  <h3> {example.id} </h3>
+                  <h4> .{example.title}</h4>{" "}
+                </div>
 
                 <img src={example.url} alt="images" height={250} />
               </div>
