@@ -59,8 +59,8 @@ const Home = () => {
         <div className={styles.d_flex}>
           {Datas &&
             Datas.map((data) => (
-              <Link href={"/datas/" + data.id} key={data.id}>
-                <a>
+              <Link href={"/datas/" + data.id} >
+                <a key={data.id}>
                   <div className={styles.container}>
                     <div>
                       <img src={data.images} height={200} width={200} />
