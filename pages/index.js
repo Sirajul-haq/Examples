@@ -59,17 +59,15 @@ const Home = () => {
         <div className={styles.d_flex}>
           {Datas &&
             Datas.map((data) => (
-              <Link href={"/datas/" + data.id}>
-                <a key={data.id}>
-                  <div className={styles.container}>
+              
+                  <div className={styles.container}  key={data.id}>
                     <div>
                       <img src={data.images} height={200} width={200} />
                     </div>
 
                     <h3>{data.moviename}</h3>
                   </div>
-                </a>
-              </Link>
+            
             ))}
         </div>
       </section>
